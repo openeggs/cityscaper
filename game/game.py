@@ -30,7 +30,7 @@ def main():
 
     def car_layer(dict_name, layer):
         for f in range(car_amount):
-            screen.blit(pygame.image.load("game\\sprites\\car.png"), (dict_name['car', f][0], dict_name['car', f][1]))
+            screen.blit(pygame.image.load("sprites\\car.png"), (dict_name['car', f][0], dict_name['car', f][1]))
             if dict_name['car', f][2] == 'r':
                 if dict_name['car', f][0] > 484:
                     dict_name['car', f][0] = 0
@@ -63,12 +63,12 @@ def main():
 
 
             blit_if(requirement=len(skyline_list) < tile_amount,
-                    sprite=f"game\\sprites\\skyline{random.randint(1,2)}.png",
+                    sprite=f"sprites\\skyline{random.randint(1,2)}.png",
                     sprite_list=skyline_list,
                     x=(480-(32*(i+1))), y=240)
 
             blit_if(requirement=len(subcity_list) < tile_amount,
-                    sprite=f"game\\sprites\\subcity{random.randint(1,5)}.png",
+                    sprite=f"sprites\\subcity{random.randint(1,5)}.png",
                     sprite_list=subcity_list,
                     x=480-(32*(i+1)), y=272)
 
@@ -83,7 +83,7 @@ def main():
 
         for i in range(tile_amount):
 
-            screen.blit(pygame.image.load(f"game\\sprites\\front_skyline1.png"), (480-(32*(i+1)), 240))
+            screen.blit(pygame.image.load(f"sprites\\front_skyline1.png"), (480-(32*(i+1)), 240))
 
         car_layer(car_dict_near,layer5)
         redraw_screen()
