@@ -1,5 +1,5 @@
 # cityscaper
-a skyline genrator with an extremely stripped downverssion of python included
+a skyline genrator in python
 run python file in \game
 requires:
 pygame
